@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vilauto | Seu próximo carro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <header class="navbar">
+
+        <nav class="nav-container">
+
+            <h2>
+                VILAUTO
+            </h2>
+            
+
+            <div class="nav-links">
+                <a href="#home">INICIO</a>
+                <a href="#adm">ADMIN</a>
+                <a href="#contato">CONTATO</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <section class="hero">
+
+        <div class="hero-overlay">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    VILAUTO
+                </p>
+
+                <h1>
+                    ENCONTRE SEU<br>
+                    PRÓXIMO CARRO
+                </h1>
+
+                <p>
+                    Encontre o veículo ideal para você.
+                </p>
+
+                <a href="#catalogo" class="hero-button">
+                    VER ESTOQUE
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+    <main id="catalogo" class="catalogo">
+
+        <div class="catalogo-container">
+
+
+            <div class="catalogo-header">
+
+                <div>
+                    <p class="section-subtitle">
+                        NOSSO ESTOQUE
+                    </p>
+
+                    <h2>
+                        Encontre seu veículo
+                    </h2>
+                </div>
+
+                <p id="contador-carros">
+                    0 veículos encontrados
+                </p>
+
+            </div>
+
+
+
+            <div class="catalogo-content">
+
+
+
+                <aside class="filtros">
+
+                    <h3>
+                        Filtrar veículos
+                    </h3>
+
+
+                    
+                    <div class="filtro-grupo">
+
+                        <label for="busca">
+                            Buscar
+                        </label>
+
+                        <input
+                            type="text"
+                            id="busca"
+                            placeholder="Marca ou modelo"
+                        >
+
+                    </div>
+
+
+                    
+                    <div class="filtro-grupo">
+
+                        <label for="marca">
+                            Marca
+                        </label>
+
+                        <select id="marca">
+
+                            <option value="">
+                                Todas as marcas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    
+                    <div class="filtro-grupo">
+
+                        <label for="modelo">
+                            Modelo
+                        </label>
+
+                        <select id="modelo">
+
+                            <option value="">
+                                Todos os modelos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    
+                    <div class="filtro-grupo">
+
+                        <label>
+                            Preço
+                        </label>
+
+                        <div class="filtro-duplo">
+
+                            <input
+                                type="number"
+                                id="preco-min"
+                                placeholder="Mínimo"
+                            >
+
+                            <input
+                                type="number"
+                                id="preco-max"
+                                placeholder="Máximo"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="filtro-grupo">
+
+                        <label>
+                            Ano
+                        </label>
+
+                        <div class="filtro-duplo">
+
+                            <input
+                                type="number"
+                                id="ano-min"
+                                placeholder="Mínimo"
+                            >
+
+                            <input
+                                type="number"
+                                id="ano-max"
+                                placeholder="Máximo"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="filtro-grupo">
+
+                        <label>
+                            Quilometragem
+                        </label>
+
+                        <div class="filtro-duplo">
+
+                            <input
+                                type="number"
+                                id="km-min"
+                                placeholder="Mínimo"
+                            >
+
+                            <input
+                                type="number"
+                                id="km-max"
+                                placeholder="Máximo"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="filtro-grupo">
+
+                        <label for="cambio">
+                            Câmbio
+                        </label>
+
+                        <select id="cambio">
+
+                            <option value="">
+                                Todos
+                            </option>
+
+                            <option value="Manual">
+                                Manual
+                            </option>
+
+                            <option value="Automático">
+                                Automático
+                            </option>
+
+                            <option value="Automatizado">
+                                Automatizado
+                            </option>
+
+                            <option value="CVT">
+                                CVT
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    
+                    <div class="filtro-grupo">
+
+                        <label for="combustivel">
+                            Combustível
+                        </label>
+
+                        <select id="combustivel">
+
+                            <option value="">
+                                Todos
+                            </option>
+
+                            <option value="Flex">
+                                Flex
+                            </option>
+
+                            <option value="Gasolina">
+                                Gasolina
+                            </option>
+
+                            <option value="Diesel">
+                                Diesel
+                            </option>
+
+                            <option value="Elétrico">
+                                Elétrico
+                            </option>
+
+                            <option value="Híbrido">
+                                Híbrido
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    
+                    <button
+                        type="button"
+                        id="limpar-filtros"
+                        class="btn-limpar"
+                    >
+                        Limpar filtros
+                    </button>
+
+                </aside>
+
+
+
+                <section class="veiculos">
+
+                    
+                    <div class="ordenacao">
+
+                        <label for="ordenar">
+                            Ordenar por:
+                        </label>
+
+                        <select id="ordenar">
+
+                            <option value="padrao">
+                                Mais relevantes
+                            </option>
+
+                            <option value="preco-menor">
+                                Menor preço
+                            </option>
+
+                            <option value="preco-maior">
+                                Maior preço
+                            </option>
+
+                            <option value="ano-novo">
+                                Ano mais novo
+                            </option>
+
+                            <option value="km-menor">
+                                Menor quilometragem
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div
+                        id="lista-veiculos"
+                        class="lista-veiculos"
+                    >
+
+                    </div>
+
+
+
+                    <div
+                        id="sem-resultados"
+                        class="sem-resultados"
+                        hidden
+                    >
+
+                        <h3>
+                            Nenhum veículo encontrado
+                        </h3>
+
+                        <p>
+                            Tente alterar os filtros para encontrar outros veículos.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <section id="sobre" class="sobre">
+
+        <div class="sobre-container">
+
+            <div class="sobre-texto">
+
+                <p class="section-subtitle">
+                    SOBRE A VILAUTO
+                </p>
+
+                <h2>
+                    Seu próximo carro está aqui.
+                </h2>
+
+                <p>
+                    Na Vilauto, buscamos oferecer veículos de qualidade
+                    para que você encontre o carro ideal para o seu momento.
+                </p>
+
+                <p>
+                    Consulte nosso estoque, conheça nossos veículos e
+                    entre em contato para saber mais.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="contato" class="contato">
+
+        <div class="contato-container">
+
+            <p class="section-subtitle">
+                ENTRE EM CONTATO
+            </p>
+
+            <h2>
+                Ficou interessado em algum veículo?
+            </h2>
+
+            <p>
+                Entre em contato com a Vilauto pelo WhatsApp.
+            </p>
+
+            <a
+                href="https://wa.me/5575982345343"
+                target="_blank"
+                class="whatsapp-button"
+            >
+                FALAR PELO WHATSAPP
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+                VILAUTO
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#catalogo">
+                    Estoque
+                </a>
+
+                <a href="#sobre">
+                    Sobre nós
+                </a>
+
+                <a href="#contato">
+                    Contato
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Vilauto. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/catalogo.js"></script>
+
+</body>
+
+</html>

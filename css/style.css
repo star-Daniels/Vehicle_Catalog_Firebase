@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Hind Vadodara", sans-serif;
+}
+
+.navbar{
+    background-image: url(./assets/images/fundo_nav_bar.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 18rem;
+    padding: 1rem;
+}
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    backdrop-filter: blur(2px);
+    box-shadow:0 1px 0 0 #fbfbfb26,
+    inset 0px 1px 0 0 #fbfbfb10;
+    
+    color: white;
+    border-radius: 20px;
+}
+
+.nav-links a{ 
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+    justify-content: center;
+    
+}
