@@ -1,0 +1,740 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Hind Vadodara", sans-serif;
+
+    background-color: #f5f5f5;
+
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.painel-header {
+    background-color: #370230;
+
+    padding: 1rem 1.5rem;
+}
+
+
+.painel-header-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.painel-logo {
+    color: white;
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   BOTÃO SAIR
+========================= */
+
+#btn-sair {
+    padding: 0.7rem 1.2rem;
+
+    border: 1px solid white;
+
+    border-radius: 6px;
+
+    background-color: transparent;
+
+    color: white;
+
+    font: inherit;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+#btn-sair:hover {
+    background-color: white;
+
+    color: #370230;
+}
+
+
+/* =========================
+   PAINEL
+========================= */
+
+.painel {
+    padding: 3rem 1.5rem;
+}
+
+
+.painel-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.painel-titulo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+}
+
+
+.painel-subtitulo {
+    color: #290021;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.painel-titulo h1 {
+    margin-top: 0.3rem;
+
+    font-size: 2rem;
+}
+
+
+/* =========================
+   BOTÃO VER SITE
+========================= */
+
+.btn-site {
+    padding: 0.8rem 1.2rem;
+
+    background-color: #370230;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    transition: 0.2s ease;
+}
+
+
+.btn-site:hover {
+    background-color: #290021;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.painel-card {
+    padding: 2rem;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    margin-bottom: 2rem;
+}
+
+
+.painel-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+
+.painel-descricao {
+    margin-bottom: 2rem;
+
+    color: #666;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.2rem;
+}
+
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    margin-bottom: 1.2rem;
+}
+
+
+.campo label {
+    font-weight: 600;
+}
+
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 0.8rem;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    background-color: white;
+
+    color: #222;
+
+    font: inherit;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #370230;
+}
+
+
+.campo textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+.campo input[type="file"] {
+    padding: 0.7rem;
+
+    cursor: pointer;
+}
+
+
+.campo small {
+    color: #777;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.campo-checkbox {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    margin-bottom: 1.5rem;
+}
+
+
+.campo-checkbox input {
+    width: 18px;
+
+    height: 18px;
+
+    accent-color: #370230;
+
+    cursor: pointer;
+}
+
+
+.campo-checkbox label {
+    cursor: pointer;
+}
+
+
+/* =========================
+   BOTÕES DO FORMULÁRIO
+========================= */
+
+.botoes-formulario {
+    display: flex;
+
+    gap: 1rem;
+}
+
+
+.btn-cadastrar,
+.btn-cancelar {
+    padding: 0.9rem 1.2rem;
+
+    border-radius: 6px;
+
+    font: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.btn-cadastrar {
+    flex: 1;
+
+    border: none;
+
+    background-color: #370230;
+
+    color: white;
+}
+
+
+.btn-cadastrar:hover {
+    background-color: #290021;
+}
+
+
+.btn-cancelar {
+    display: none;
+
+    border: 1px solid #ccc;
+
+    background-color: white;
+
+    color: #444;
+}
+
+
+.btn-cancelar:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+#mensagem {
+    margin-top: 1rem;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+#mensagem.sucesso {
+    color: #167c32;
+}
+
+
+#mensagem.erro {
+    color: #b00020;
+}
+
+
+/* =========================
+   LISTA DE VEÍCULOS
+========================= */
+
+.lista-card {
+    margin-bottom: 0;
+}
+
+
+.lista-titulo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+
+.lista-titulo h2 {
+    margin-top: 0.3rem;
+}
+
+
+#quantidade-carros {
+    padding: 0.5rem 0.8rem;
+
+    border-radius: 20px;
+
+    background-color: #f1e9ef;
+
+    color: #370230;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   ITEM DO CARRO
+========================= */
+
+.carro-admin {
+    display: flex;
+
+    gap: 1.5rem;
+
+    padding: 1.2rem 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.carro-admin:last-child {
+    border-bottom: none;
+}
+
+
+.carro-admin-imagem {
+    width: 180px;
+
+    height: 120px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background-color: #eee;
+}
+
+
+.carro-admin-imagem img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.sem-imagem {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   INFORMAÇÕES DO CARRO
+========================= */
+
+.carro-admin-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.carro-admin-topo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+}
+
+
+.carro-admin-marca {
+    margin-bottom: 0.1rem;
+
+    color: #290021;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.carro-admin-info h3 {
+    font-size: 1.3rem;
+}
+
+
+.carro-admin-preco {
+    margin-top: 0.4rem;
+
+    color: #370230;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   TAG DESTAQUE
+========================= */
+
+.tag-destaque {
+    padding: 0.35rem 0.6rem;
+
+    border-radius: 5px;
+
+    background-color: #370230;
+
+    color: white;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   DADOS DO CARRO
+========================= */
+
+.carro-admin-dados {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem 1rem;
+
+    margin-top: 0.7rem;
+
+    color: #666;
+
+    font-size: 0.9rem;
+}
+
+
+.carro-admin-dados span {
+    position: relative;
+}
+
+
+.carro-admin-dados span:not(:last-child)::after {
+    content: "•";
+
+    margin-left: 1rem;
+
+    color: #bbb;
+}
+
+
+/* =========================
+   AÇÕES
+========================= */
+
+.carro-admin-acoes {
+    display: flex;
+
+    gap: 0.7rem;
+
+    margin-top: 1rem;
+}
+
+
+.btn-editar,
+.btn-excluir {
+    padding: 0.55rem 1rem;
+
+    border-radius: 5px;
+
+    font: inherit;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.btn-editar {
+    border: none;
+
+    background-color: #370230;
+
+    color: white;
+}
+
+
+.btn-editar:hover {
+    background-color: #290021;
+}
+
+
+.btn-excluir {
+    border: 1px solid #b00020;
+
+    background-color: white;
+
+    color: #b00020;
+}
+
+
+.btn-excluir:hover {
+    background-color: #b00020;
+
+    color: white;
+}
+
+
+/* =========================
+   LISTA VAZIA
+========================= */
+
+.lista-vazia {
+    padding: 2rem;
+
+    text-align: center;
+
+    color: #777;
+}
+
+
+.erro-texto {
+    color: #b00020;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 700px) {
+
+    .painel {
+        padding: 2rem 1rem;
+    }
+
+
+    .painel-titulo {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .painel-titulo h1 {
+        font-size: 1.6rem;
+    }
+
+
+    .painel-card {
+        padding: 1.5rem;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .botoes-formulario {
+        flex-direction: column;
+    }
+
+
+    .lista-titulo {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .carro-admin {
+        flex-direction: column;
+    }
+
+
+    .carro-admin-imagem {
+        width: 100%;
+
+        height: 200px;
+    }
+
+
+    .carro-admin-topo {
+        flex-direction: column;
+    }
+
+
+    .carro-admin-acoes {
+        width: 100%;
+    }
+
+
+    .btn-editar,
+    .btn-excluir {
+        flex: 1;
+    }
+
+}

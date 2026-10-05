@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administração | Vilauto</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <main class="login">
+
+        <div class="login-container">
+
+            <div class="login-logo">
+                Vilauto
+            </div>
+
+            <h1>Área administrativa</h1>
+
+            <p class="login-subtitulo">
+                Entre para gerenciar os veículos.
+            </p>
+
+            <form id="form-login">
+
+                <div class="campo">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Seu e-mail"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Sua senha"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+                <p id="mensagem"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="js/admin.js?v=2"></script>
+
+</body>
+
+</html>

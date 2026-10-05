@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel administrativo | Vilauto</title>
+
+    <link rel="stylesheet" href="css/painel.css">
+</head>
+
+<body>
+
+    <header class="painel-header">
+
+        <div class="painel-header-container">
+
+            <div class="painel-logo">
+                Vilauto
+            </div>
+
+            <button id="btn-sair">
+                Sair
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="painel">
+
+        <div class="painel-container">
+
+
+            <!-- TÍTULO -->
+
+            <div class="painel-titulo">
+
+                <div>
+
+                    <p class="painel-subtitulo">
+                        Administração
+                    </p>
+
+                    <h1>
+                        Gerenciar veículos
+                    </h1>
+
+                </div>
+
+                <a href="index.html" class="btn-site">
+                    Ver site
+                </a>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+
+            <section class="painel-card">
+
+                <div class="formulario-titulo">
+
+                    <div>
+
+                        <h2 id="titulo-formulario">
+                            Cadastrar veículo
+                        </h2>
+
+                        <p class="painel-descricao">
+                            Preencha os dados abaixo para cadastrar um veículo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="form-carro">
+
+
+                    <div class="form-grid">
+
+
+                        <!-- MARCA -->
+
+                        <div class="campo">
+
+                            <label for="marca">
+                                Marca
+                            </label>
+
+                            <input
+                                type="text"
+                                id="marca"
+                                placeholder="Ex: Toyota"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- MODELO -->
+
+                        <div class="campo">
+
+                            <label for="modelo">
+                                Modelo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="modelo"
+                                placeholder="Ex: Corolla"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ANO -->
+
+                        <div class="campo">
+
+                            <label for="ano">
+                                Ano
+                            </label>
+
+                            <input
+                                type="number"
+                                id="ano"
+                                placeholder="Ex: 2023"
+                                min="1900"
+                                max="2100"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PREÇO -->
+
+                        <div class="campo">
+
+                            <label for="preco">
+                                Preço
+                            </label>
+
+                            <input
+                                type="number"
+                                id="preco"
+                                placeholder="Ex: 125900"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- QUILOMETRAGEM -->
+
+                        <div class="campo">
+
+                            <label for="quilometragem">
+                                Quilometragem
+                            </label>
+
+                            <input
+                                type="number"
+                                id="quilometragem"
+                                placeholder="Ex: 32000"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- CÂMBIO -->
+
+                        <div class="campo">
+
+                            <label for="cambio">
+                                Câmbio
+                            </label>
+
+                            <select id="cambio" required>
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="Manual">
+                                    Manual
+                                </option>
+
+                                <option value="Automático">
+                                    Automático
+                                </option>
+
+                                <option value="Automatizado">
+                                    Automatizado
+                                </option>
+
+                                <option value="CVT">
+                                    CVT
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- COMBUSTÍVEL -->
+
+                        <div class="campo">
+
+                            <label for="combustivel">
+                                Combustível
+                            </label>
+
+                            <select id="combustivel" required>
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="Flex">
+                                    Flex
+                                </option>
+
+                                <option value="Gasolina">
+                                    Gasolina
+                                </option>
+
+                                <option value="Etanol">
+                                    Etanol
+                                </option>
+
+                                <option value="Diesel">
+                                    Diesel
+                                </option>
+
+                                <option value="Elétrico">
+                                    Elétrico
+                                </option>
+
+                                <option value="Híbrido">
+                                    Híbrido
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                       
+
+                        <div class="campo">
+
+                            <label for="cor">
+                                Cor
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cor"
+                                placeholder="Ex: Prata"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    
+
+                    <div class="campo">
+
+                        <label for="descricao">
+                            Descrição
+                        </label>
+
+                        <textarea
+                            id="descricao"
+                            rows="5"
+                            placeholder="Digite uma descrição do veículo..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    
+
+                    <div class="campo">
+
+                        <label for="imagem">
+                            Imagem do veículo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="imagem"
+                            accept="image/*"
+                        >
+
+                        <small id="imagem-info">
+                            Selecione a imagem do veículo.
+                        </small>
+
+                    </div>
+
+
+                    
+
+                    <div class="campo-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="destaque"
+                        >
+
+                        <label for="destaque">
+                            Marcar veículo como destaque
+                        </label>
+
+                    </div>
+
+
+                    
+
+                    <div class="botoes-formulario">
+
+                        <button
+                            type="submit"
+                            id="btn-salvar"
+                            class="btn-cadastrar"
+                        >
+                            Cadastrar veículo
+                        </button>
+
+                        <button
+                            type="button"
+                            id="btn-cancelar"
+                            class="btn-cancelar"
+                        >
+                            Cancelar edição
+                        </button>
+
+                    </div>
+
+
+                    
+
+                    <p id="mensagem"></p>
+
+
+                </form>
+
+            </section>
+
+
+            
+
+            <section class="painel-card lista-card">
+
+                <div class="lista-titulo">
+
+                    <div>
+
+                        <p class="painel-subtitulo">
+                            Estoque
+                        </p>
+
+                        <h2>
+                            Veículos cadastrados
+                        </h2>
+
+                    </div>
+
+                    <span id="quantidade-carros">
+                        0 veículos
+                    </span>
+
+                </div>
+
+
+                <div id="lista-carros">
+
+                    <p class="lista-vazia">
+                        Carregando veículos...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="js/painel.js?v=2"
+    ></script>
+
+</body>
+
+</html>
